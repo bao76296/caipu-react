@@ -14,9 +14,10 @@ class HomeHotClassify extends Component{
         if(this.props.hotClassifyListData){
             
             let hotList = this.props.hotClassifyListData.category["热门"];
-            hotList = hotList.splice(0,12);
+            hotList = hotList.splice(0,11);
+            hotList.push('....更多')
             return hotList.map( item => {return {
-                text : item
+                text : item 
             }})
         }
     }

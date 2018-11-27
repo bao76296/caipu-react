@@ -11,4 +11,4 @@ export const MainTabIcon = styled.div`
     width: 22px;
     height: 22px;
     background:  ${props => `url(${props.url}) center center /  21px 21px no-repeat` } 
-`
+` 

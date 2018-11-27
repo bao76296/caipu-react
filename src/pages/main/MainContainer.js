@@ -54,6 +54,7 @@ class MainContainer extends Component {
     console.log(666);
     return this.state.tabs.map( tab => 
             <TabBar.Item
+             
               title = {tab.title}
               key = { tab.id }
               icon={<MainTabIcon url = { tab.icon }/>}
@@ -64,7 +65,7 @@ class MainContainer extends Component {
                   selectedTab:  tab.selected ,
                 });
               }}
-              data-seed="logId"
+              // data-seed="logId"
             >
             {tab.component}
             </TabBar.Item>
@@ -74,7 +75,6 @@ class MainContainer extends Component {
 
   render() {
     return (
-    
       <MainWrapper>
         <TabBar
           unselectedTintColor="#666"
