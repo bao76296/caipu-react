@@ -24,6 +24,9 @@ class ContentClassify extends Component {
         this.props.changeActive(i)
         this.setState({
             active : i
+
+
+            
         })
     }
 
