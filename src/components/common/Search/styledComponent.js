@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const SearchWrapper = styled.div`
+    z-index:2;
     padding : 0.32rem 0.4rem;
     background : ${props => props.type == 'home' ? `#f5f5f5` : `#fff`  }   ;
 `
@@ -23,4 +24,5 @@ export const  SearchBox = styled.div`
         color : #989898;
         margin-left : 0.133333rem;
     }
+    
 `

@@ -34,7 +34,7 @@ class MainContainer extends Component {
 
 
   componentDidUpdate(props, state) {
-    console.log(333) //  组件刷新问题。   路由的父组件发现 需要更新路由。然后需要渲染  这时调用的 父组件的方法，来重新渲染，父组件属性变化 当前这个路由组件是否会 重新render 以及自路由会不会重新render  
+    // console.log(333) //  组件刷新问题。   路由的父组件发现 需要更新路由。然后需要渲染  这时调用的 父组件的方法，来重新渲染，父组件属性变化 当前这个路由组件是否会 重新render 以及自路由会不会重新render  
     if(state.selectedTab === 'menu' && this.state.selectedTab !== 'menu' ){
         // this.setState({
         //   historyPathname : props.location.pathname
@@ -51,7 +51,7 @@ class MainContainer extends Component {
   
 
   rrenderItemTabx () {
-    console.log(666);
+    // console.log(666);
     return this.state.tabs.map( tab => 
             <TabBar.Item
              

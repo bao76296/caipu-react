@@ -12,4 +12,5 @@ export const HeaderContainer = styled.header`
         font-size : .48rem;
         color : #fff;
     }
+    z-index : 2;
 `

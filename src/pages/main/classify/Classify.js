@@ -10,20 +10,14 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group'
 class Classify extends Component {
     
     shouldComponentUpdate (props) {
-        console.log(props)
-        console.log(this.props)
-       if(props.location.pathname === '/' && this.props.pathname !== '/menu' ){
-           console.log(props)
-           console.log(this.props)
-           
+       if(props.location.pathname === '/' && (this.props.pathname !== '/menu' || this.props.pathname !== '/food') ){ 
         return false;
        } 
-       
        return true;
     }
 
     render () {
-        let pathname = this.props.location.pathname;
+        
         return (
             <ClassWrapper>
                     <common.Header>
@@ -32,31 +26,8 @@ class Classify extends Component {
                     </common.Header>
                     <common.Search type="classify">想吃什么搜这里，如排骨</common.Search>
                     <ClassifyTabbox>
-                        <TransitionGroup>
-                            <CSSTransition
-                                key={this.props.history.location.key}
-                                timeout={500}
-                                classNames={{
-                                    enter : 'animated faster',
-                                    enterActive : `${ pathname === '/menu' ? 'slideInRight' : 'slideInLeft'}`,
-                                  
-                                    // enterActive : 'slideInLeft',
-                                    exit: 'animated faster',
-                                    exitActive: `${ pathname !== '/menu' ? 'slideInRight' : 'slideInLeft'}`,
-                                }}
-                            >
-                               <>
-                                    <Route path = "/" exact render = {() => {
-                                                console.log(123);
-                                                return <Redirect to = "/food" />
-                                            }} />
-                                    <Route path ="/menu" component= {ClassifyMenu} ></Route>
-                                    <Route path ="/food" component= {ClassifyFood} ></Route>
-                               </>
-                                    
-                               
-                            </CSSTransition>
-                        </TransitionGroup>
+                        <Route path ="/menu" exact children= {(props) => <ClassifyMenu {...props} />} ></Route>
+                        <Route path ="/food" exact children= {(props) => <ClassifyFood {...props} />}></Route>
                     </ClassifyTabbox>
             </ClassWrapper>
            

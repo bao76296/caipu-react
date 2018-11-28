@@ -1,15 +1,17 @@
 import React , { Component } from 'react';
 import { ClassifyTabContainer } from './styledComponent'
+import wrapperAnimate from '@C/common/Hoc/wrapper'
+import ContentMenu from './contents/contentMenu';
 class ClassifyMenu extends Component {
     render () {
         return (
             
         <ClassifyTabContainer>
-                llllllllllllll
+               <ContentMenu/>
         </ClassifyTabContainer>
           
         )
     }
 }
 
-export default ClassifyMenu;
+export default wrapperAnimate(ClassifyMenu);

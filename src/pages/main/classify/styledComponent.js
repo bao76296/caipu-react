@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const ClassWrapper = styled.div`
     width : 100%;
     height: 100%;
+    display : flex;
+    flex-direction : column;
+    overflow : hidden;
 `
 
 export const  ClassifyContainer = styled.div`
@@ -35,8 +38,12 @@ export const ClassifySlider = styled.div`
     z-index:1;
 `
 export const ClassifyTabbox = styled.div`
+    
     position : relative;
     width:100%;
+   
+    flex-grow: 1;
+    flex-shrink: 1;
 `
 
 
@@ -45,4 +52,5 @@ export const ClassifyTabContainer = styled.div`
     top:0;
     left : 0;
     width : 100%;
+    height : 100%;
 `
