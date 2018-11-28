@@ -19,14 +19,11 @@ class ContentClassify extends Component {
             </ContentClassifyWrapper>
         )
     }
-
+    //这是一个测试
     changeActive (i) {
         this.props.changeActive(i)
         this.setState({
             active : i
-
-
-            
         })
     }
 
