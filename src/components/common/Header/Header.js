@@ -1,6 +1,10 @@
 import React , { Component } from 'react';
 import { HeaderContainer } from './styledComponents';
+
 class Header extends Component {
+
+  
+
     render () {
         return (
             <HeaderContainer>

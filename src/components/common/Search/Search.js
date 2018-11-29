@@ -5,7 +5,7 @@ class Search extends Component {
     render () {
         return (
             <SearchWrapper { ...this.props }>
-                <SearchBox { ...this.props }>
+                <SearchBox { ...this.props } >
                     <img src = {img.search}/>
                     <p>{this.props.children}</p>
                 </SearchBox>
@@ -15,4 +15,4 @@ class Search extends Component {
     }
 }
 
-export default Search
+export default Search;

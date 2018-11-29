@@ -13,4 +13,7 @@ export const HeaderContainer = styled.header`
         color : #fff;
     }
     z-index : 2;
+    .left {
+        font-size:16px;
+    }
 `

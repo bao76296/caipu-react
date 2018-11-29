@@ -26,3 +26,21 @@ export const  SearchBox = styled.div`
     }
     
 `
+
+export const SearchHeadBox = styled.div`
+    
+    height : 30px;
+    width : 280px;
+    border-radius : 5px;
+    background : #d46027;
+    display : flex;
+    align-items : center;
+    color : #fff;
+    padding-left : 8px;
+    span{
+        display : inline-block;
+        padding-left : 8px;
+        color : #fff;
+        font-size : 14px;
+    }
+`

@@ -7,6 +7,9 @@ import { HomeWrapper } from './styledComponent'
 import * as common from '@C/common'
 // import Icon from '@C/common/Icon';
 import BScroll from 'better-scroll';
+import { withRouter } from 'react-router-dom'
+
+
 class HomeContainer extends Component {
 
     scroll = {
@@ -33,7 +36,9 @@ class HomeContainer extends Component {
                         // rightContent = {5555}
                     >菜谱大全</common.Header>
                     <HomeSwiper></HomeSwiper>
-                    <common.Search type="home">想吃什么搜这里，如川菜</common.Search>
+                    <common.Search type="home" onClick = {() => {
+                    this.props.history.push('/list');
+                 }}>想吃什么搜这里，如川菜</common.Search>
                     <HomeHotClassify></HomeHotClassify>
                     <HomeBetter scroll = {this.scroll}></HomeBetter>
                 </div>
@@ -44,4 +49,4 @@ class HomeContainer extends Component {
     }
 }
 
-export default HomeContainer;
+export default withRouter(HomeContainer);

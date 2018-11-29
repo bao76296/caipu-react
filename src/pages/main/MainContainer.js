@@ -10,18 +10,19 @@ import { withRouter } from 'react-router-dom'
 import  * as img from '@As/images'
 import HomeContainer from './home/homeContain'
 import Classify from './classify/Classify';
+import MoreContarner from './more/moreContainer'
 
 class MainContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 'cook',
+      selectedTab: 'more',
       historyPathname : '',
       tabs : [
         { id : uuid(), title : '菜谱大全',selected : 'cook', icon : img.cookbook, selectedIcon : img.cookbookActive, component : <HomeContainer/>   },
         { id : uuid(), title : '分类',selected : 'menu', icon : img.menu, selectedIcon : img.menuActive, component : <Classify/>  },
         { id : uuid(), title : '地图',selected : 'map', icon : img.location, selectedIcon : img.locationActive, component : 'map'  },
-        { id : uuid(), title : '更多',selected : 'more', icon : img.more, selectedIcon : img.moreActive, component : 'more'  }
+        { id : uuid(), title : '更多',selected : 'more', icon : img.more, selectedIcon : img.moreActive, component :  <MoreContarner/>  }
       ]
     };
   }
@@ -90,4 +91,4 @@ class MainContainer extends Component {
   }
 }
 
-export default withRouter(MainContainer);
+export default MainContainer;
